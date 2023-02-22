@@ -11,11 +11,13 @@ I built a Deep Learning model to analyze charitable contributions and determine 
 
 ## Process
 **Data Processing**
+
 I dropped Identification Numbers and Charity Names from the database, as that information was not necessary for the model. The category of focus for the model is one called “IS_SUCCESSFUL” as that would be what my model will be predicting.  Since I cannot see how the data correlates, I left all other features in the dataset.
 
 Since the model runs on Integer values, I needed to investigate and transform the categorical variables.  Two of them stuck out and needed to be transformed into bins before encoding them to integer values: Application Type and Classification.  I grouped each of them into bins to ensure I had no more than 10.  I then used `OneHotEncoder` to convert the categorical data to integers.  This involved creating a separate DataFrame and then merging it back into the original.
 
 **Compile, Train, Evaluate**
+
 Now that the data was prepared, I split it into my training and testing sets and scaled the data to ensure the model weighed the variables appropriately.
 
 I designed a Deep Learning model with keras Sequential function from TensorFlow.  Since I was dealing with about 40 input features from the data, I set my Input and First Hidden Layer of the model with 80 neurons.  I created a Second Hidden Layer with 40 neurons.  I used the ReLU activation for the hidden layers and a Sigmoid activation to study probability for the output layer.
