@@ -31,18 +31,23 @@ I saved the model as `AlphabetSoupCharity.h5`.
 ## Results
 The initial evaluation of the model resulted in less than 73% accuracy, so I attempted several changes to the model to optimize the accuracy.
 ***Test 1: Lowered Neurons, Added Hidden Layer***
+
 This did not improve the accuracy.
 
 ***Test 2: Kept Original Neurons, Added Hidden Layer***
+
 This did not improve the accuracy.
 
 ***Test 3: Change the Compile Optimizer***
+
 Several of the keras optimizers significantly reduced the accuracy of the model.  The `adamax` optimizer showed negligible improvement, but the accuracy was still below 73%
 
 ***Test 4: Change the activations***
+
 I attempted many combinations of changing activations with `tanh`, `gelu`, `swish`, `sigmoid`, and `relu`, but none of these improved the accuracy of the model.
 
 ***Additional undocumented tests***
+
 I tried resampling the data to balance out any discrepancies in input and output.  I tried increasing and lowering the epochs, and I added several hidden layers.  None of these improved the performance of the model.
 
 ## Summary
